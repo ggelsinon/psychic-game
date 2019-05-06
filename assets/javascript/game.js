@@ -22,7 +22,7 @@ var directionsText = document.getElementById("directions-text")
 var winsText = document.getElementById("winsText");
 var lossesText = document.getElementById("lossesText");
 var remainingText = document.getElementById("remainingText");
-var wrongGuesses = document.getElementById("wrongGuessesText")
+var wrongGuessesText = document.getElementById("wrongGuessesText")
 
 //function starts the game
 document.onkeyup = function (event) {
@@ -42,7 +42,7 @@ document.onkeyup = function (event) {
     } else if (remaining > 0 && userGuess !== computerGuess) {
         remaining = remaining - 1;//reduce remaining by 1
         //push wrong guess into the array
-
+        wrongGuesses.push(userGuess);
         //donezo scenario
     } else {
         losses++;
@@ -54,10 +54,10 @@ document.onkeyup = function (event) {
     directionsText.textContent = "";
 
     //display results
-    winsText.textContent = "Your wins: " + wins;
-    lossesText.textContent = "Your losses " + losses;
-    remainingText.textContent = "Your remaining guesses " + remaining;
-    wrongGuesses.textContent = "Your guesses so far " + wrongGuesses;
+    winsText.textContent = "Your wins count: " + wins;
+    lossesText.textContent = "Your losses count: " + losses;
+    remainingText.textContent = "Your remaining guesses count: " + remaining;
+    wrongGuessesText.textContent = "Your guesses so far: " + wrongGuesses;
 
 
 }

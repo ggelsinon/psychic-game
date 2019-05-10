@@ -46,8 +46,8 @@ document.onkeyup = function (event) {
         //donezo scenario
     } else {
         losses++;
-        remaining = 0;
-        wrongGuesses = []
+        remaining = 9;
+        wrongGuesses = [];
     }
 
     // I like how RPS game hides the directions after you start playing I want to try and do that too
